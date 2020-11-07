@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 import discord
 import asyncio
+import os
 from discord.ext import commands
 from config import settings
 bot = commands.Bot(command_prefix = "!!")
@@ -346,4 +347,5 @@ async def on_member_remove(member):
     print(f'{name} -> {user} покинул сервер')
     await lc.send(f'{name} -> {user} покинул сервер')
 
+token = os.environ.get('TOKEN') 
 bot.run('TOKEN')
