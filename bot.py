@@ -348,4 +348,4 @@ async def on_member_remove(member):
     await lc.send(f'{name} -> {user} покинул сервер')
 
 token = os.environ.get('TOKEN') 
-bot.run('TOKEN')
+bot.run(str(token))
